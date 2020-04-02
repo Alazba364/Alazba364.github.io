@@ -1,0 +1,2478 @@
+<html lang="en"><head>
+<link rel="stylesheet" type="text/css" href="new 3.css" media="screen"/> 
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=1024, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="">
+
+    <title>Example: FlameGaming / LSM</title>
+    <meta name="description" content="Gmod Loading Screen Maker / Running a demo of FlameGaming - Powered by gmod-lsm.com">
+
+    <meta name="theme-color" content="#e74c3c">
+
+    <link href="https://gmod-lsm.com/assets/css/normalize.css" rel="stylesheet">
+
+    <link href="https://gmod-lsm.com/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://gmod-lsm.com/assets/css/loadingscreen-base.css" rel="stylesheet">
+    
+     <link href="https://gmod-lsm.com/assets/css/load.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="https://gmod-lsm.com/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+    <style>
+
+    html,body{
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body{
+      background: #000;
+    }
+
+
+  </style>
+
+  </head>
+
+  <body>
+
+    <div id="loader-wrapper" style="display: none;">
+      <div id="loader"></div>
+  </div>
+
+  
+  	
+          <style>
+       #bg, #bg img, #bg2{
+        background-image: #000000;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+      } 
+      </style>
+      
+    
+  
+    
+
+<link href="https://gmod-lsm.com/assets/css/designs/split.css?v=1.7.2" rel="stylesheet">
+<div class="loading-screen loading-screen-demo">
+  <div class="bottom-bar" style="background-color: #222222">
+    <div class="row" style="height: 100%">
+  <div class="col">
+      <div class="rules-info">
+        <div class="rules-info-header" style="background-color: #222222"><h5 class="my-0 py-0" style="color: #f2f2f2">Rules</h5></div>
+        <div class="rules-item" style="background-color: #222222">
+          <div class="rules-item-number">
+            <h4 class="py-0 my-0" style="color: #f2f2f2">1.</h4>
+          </div>
+          <div class="rules-item-text">
+            <p class="lead" style="color: #ffffff">No Prop-killing</p>
+          </div>
+        </div>        <div class="rules-item rules-dark" style="background-color: #222222">
+          <div class="rules-item-number">
+            <h4 class="py-0 my-0" style="color: #f2f2f2">2.</h4>
+          </div>
+          <div class="rules-item-text">
+            <p class="lead" style="color: #ffffff">No Spamming</p>
+          </div>
+        </div>        <div class="rules-item" style="background-color: #222222">
+          <div class="rules-item-number">
+            <h4 class="py-0 my-0" style="color: #f2f2f2">3.</h4>
+          </div>
+          <div class="rules-item-text">
+            <p class="lead" style="color: #ffffff">No Cheats/Exploits</p>
+          </div>
+        </div>        <div class="rules-item rules-dark" style="background-color: #222222">
+          <div class="rules-item-number">
+            <h4 class="py-0 my-0" style="color: #f2f2f2">4.</h4>
+          </div>
+          <div class="rules-item-text">
+            <p class="lead" style="color: #ffffff">No Prop-abusing</p>
+          </div>
+        </div>                        </div></div>  <div class="col"><div class="description-info" style="background-color: #222222">
+    <div class="description-info-header" style="background-color: #222222"><h5 class="my-0 py-0" style="color: #f2f2f2">Description</h5></div>
+          <p class="lead mb-0 pb-0" style="color: #ffffff">Welcome to FlameGaming!<br>
+We hope you enjoy your stay on our DarkRP Server. See you there!<br>
+<br>
+And remember... staff's always right!</p>
+        </div></div>
+  <div class="col"><div class="server-info" style="background-color: #222222">
+          <div class="server-info-header" style="background-color: #222222"><h5 class="my-0 py-0" style="color: #f2f2f2">Server Info</h5></div><div class="server-info-table">
+            <div class="server-info-slot" style="width: 60px"><img alt="Map" class="server-info-icon" src="https://gmod-lsm.com/images/designs/map-regular-light.svg"><br><img alt="Gamemode" class="server-info-icon" src="https://gmod-lsm.com/images/designs/gamepad-solid-light.svg"></div><div class="server-info-slot" style="text-align: left;"><p id="load-mapname" style="color: #f2f2f2">gm_flatgrass</p><p id="load-gamemode" style="color: #f2f2f2">sandbox</p></div>
+          </div>
+        </div></div>
+</div></div>
+      <div class="title-info">
+        <h4 class="my-0 py-0" style="color: #e8e8e8">Welcome to</h4>
+        <h1 class="my-0 py-0" style="color: #e8e8e8">FlameGaming</h1>
+      </div>
+      
+        <div class="user-info" style="background-color: #222222">
+          <div class="user-info-img" style="border-color: #e74c3c">
+            <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/b3/b301117db48b92b032bb29b273f05533fa7ae7c8_full.jpg">
+        </div>
+          <div class="user-info-text">
+            <h4 class="mb-0" style="color: #f2f2f2">Joining Test User</h4>
+            <p class="lead text-black my-0 pb-0" style="color: #777d84">STEAM_0:1:444765763</p>
+          </div>
+        </div>
+                <div class="staff-info">
+          <div class="staff-info-header" style="background-color: #222222"><h5 class="my-0 py-0" style="color: #f2f2f2">Staff</h5></div>
+          <div class="staff-item" style="background-color: #222222">
+          <div class="staff-item-img" style="border-color: #e74c3c">
+            <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/08/08f5905396113a6293e11f636e4ffff0df1b7b8d_medium.jpg">
+          </div>
+          <div class="staff-item-text">
+            <h4 class="my-0 py-0" style="color: #f2f2f2">James</h4>
+            <p class="lead" style="color: #777d84">Owner</p>
+          </div>
+        </div>        <div class="staff-item" style="background-color: #222222">
+          <div class="staff-item-img" style="border-color: #e74c3c">
+            <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/09/094032c5e866e97aa88761fda84ea25c4814aac6_medium.jpg">
+          </div>
+          <div class="staff-item-text">
+            <h4 class="my-0 py-0" style="color: #f2f2f2">smith</h4>
+            <p class="lead" style="color: #777d84">Superadmin</p>
+          </div>
+        </div>        <div class="staff-item" style="background-color: #222222">
+          <div class="staff-item-img" style="border-color: #e74c3c">
+            <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/00/00589faac6bfa8ab9dcaa3359f1ee3ffb361d934_medium.jpg">
+          </div>
+          <div class="staff-item-text">
+            <h4 class="my-0 py-0" style="color: #f2f2f2">Dwight K. Schrute</h4>
+            <p class="lead" style="color: #777d84">Admin</p>
+          </div>
+        </div>          </div>          <div class="progress-bar-n" style="background-color: #222222">
+        <h2 style="color: #f2f2f2"><span id="percent">100</span>%<span class="progresstext" id="progresstext">Sending client info...</span></h2>
+          <div class="progress-bar-n-inner" id="progress-bar" style="background-color: rgb(231, 76, 60); width: 100%;"><div><h2 style="color: #222222"><span id="percent-loaded">100</span>%<span class="progresstext" id="progresstext-loaded">Sending client info...</span></h2></div></div>
+        </div>
+      </div>
+      <script type="text/javascript">
+         function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode ) {
+         document.getElementById("load-mapname").innerHTML = mapname;
+         document.getElementById("load-gamemode").innerHTML = gamemode;
+         }
+       </script>
+      <div style="background-size: cover; margin: 0px; padding: 0px; background-image: url(&quot;https://wallpapercave.com/wp/LDX4QKv.jpg&quot;); opacity: 0;" id="bg">
+      </div> 
+
+      <div style="background-size: cover; margin: 0px; padding: 0px; background-image: url(&quot;https://wallpapercave.com/wp/wp2858269.jpg&quot;); background-repeat: no-repeat;" id="bg2">
+      </div>
+
+    <script src="https://gmod-lsm.com/assets/vendor/jquery/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $( "#loader-wrapper" ).fadeOut( "slow" );
+      });
+    $(function () {
+  $("[data-toggle=popover]").popover({html:true})
+  $("#upgrade-pro").popover('show')
+
+})
+  </script>
+
+    <script type="text/javascript">
+
+   document.getElementById("percent").innerHTML = "5";
+   document.getElementById("percent-loaded").innerHTML = "5";
+
+   $('#progress-bar').css({ "width" : "5%"});
+
+   document.getElementById("progresstext").innerHTML = "Retrieving server info...";
+   document.getElementById("progresstext-loaded").innerHTML = "Retrieving server info...";
+</script>
+
+      <script type="text/javascript">
+        var background1 = "https:\/\/cdn.allwallpaper.in\/wallpapers\/1920x1080\/16795\/space-hell-1920x1080-wallpaper.jpg";
+        var background2 = "https:\/\/wallpapercave.com\/wp\/wp2858269.jpg";
+        var background3 = "https:\/\/stmed.net\/sites\/default\/files\/styles\/1920x1080\/public\/drag-me-to-hell-wallpapers-29506-2985519.jpg?itok=4xn-v-Cc";
+        var background4 = "https:\/\/wallpapercave.com\/wp\/LDX4QKv.jpg";
+      </script>
+
+           <script>
+    	//Change Progress
+	$(document).ready(function(){
+	
+	for (let progress = 0; progress < 11; progress++) {
+		setTimeout( function timer(){
+	
+	if(progress == 1){
+	$("#progress-bar").animate({width: '10%'});
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 10;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 2){
+		
+	$("#progresstext").text("Mounting Addons");
+	$("#progress-bar").animate({width: '20%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 20;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 3){
+	
+	$("#progress-bar").animate({width: '30%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 30;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 4){
+	
+	$("#progress-bar").animate({width: '40%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 40;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 5){
+	
+	$("#progress-bar").animate({width: '50%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 50;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	/*
+	if(progress == 6){
+	
+	$("#progresstext").text('Workshop complete');
+	$("#progress-bar").animate({width: '60%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 60;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	} */
+	
+	if(progress == 6){
+		
+	$("#progresstext").text("Workshop Complete");
+	$("#progress-bar").animate({width: '70%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 70;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 8){
+	
+	$("#progress-bar").animate({width: '80%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 80;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 9){
+		
+	$("#progresstext").text("Sending client info...");
+	$("#progress-bar").animate({width: '90%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 90;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 10){
+	
+	$("#progress-bar").animate({width: '100%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 100;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+
+
+	if(progress == 1){
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 10;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 2){
+		
+	$("#progresstext-loaded").text("Mounting Addons");
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 20;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 3){
+	
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 30;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 4){
+	
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 40;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 5){
+	
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 50;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	/*
+	if(progress == 6){
+	
+	$("#progresstext").text('Workshop complete');
+	$("#progress-bar").animate({width: '60%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 60;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	} */
+	
+	if(progress == 6){
+		
+	$("#progresstext-loaded").text("Workshop Complete");
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 70;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 8){
+	
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 80;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 9){
+		
+	$("#progresstext-loaded").text("Sending client info...");
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 90;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 10){
+	
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 100;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+
+	}, progress*2000 );
+	} 
+
+});
+
+
+    </script>
+
+    <script>
+		//showDemo();
+    $("#showDemo").fadeOut(0);
+		function showDemo(){
+			$("#showDemo").fadeIn(2000);
+			setTimeout(function(){
+				$("#showDemo").fadeOut(2000);
+				setTimeout(showDemo, 4000);
+			}, 4000);
+		}
+	</script>
+
+      <script src="https://gmod-lsm.com/assets/js/background-cycle.js"></script>
+
+    <script src="https://gmod-lsm.com/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  
+
+</body></html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1024, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="">
+
+    <title>Example: FlameGaming / LSM</title>
+    <meta name="description" content="Gmod Loading Screen Maker / Running a demo of FlameGaming - Powered by gmod-lsm.com">
+
+    <meta name="theme-color" content="#e74c3c">
+
+    <link href="https://gmod-lsm.com/assets/css/normalize.css" rel="stylesheet">
+
+    <link href="https://gmod-lsm.com/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://gmod-lsm.com/assets/css/loadingscreen-base.css" rel="stylesheet">
+    
+     <link href="https://gmod-lsm.com/assets/css/load.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="https://gmod-lsm.com/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+    <style>
+
+    html,body{
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body{
+      background: #000;
+    }
+
+
+  </style>
+
+  </head>
+<body>
+
+    <div id="loader-wrapper" style="display: none;">
+      <div id="loader"></div>
+  </div>
+
+  
+  	
+          <style>
+       #bg, #bg img, #bg2{
+        background-image: #000000;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+      } 
+      </style>
+      
+    
+  
+    
+
+<link href="https://gmod-lsm.com/assets/css/designs/split.css?v=1.7.2" rel="stylesheet">
+<div class="loading-screen loading-screen-demo">
+  <div class="bottom-bar" style="background-color: #222222">
+    <div class="row" style="height: 100%">
+  <div class="col">
+      <div class="rules-info">
+        <div class="rules-info-header" style="background-color: #222222"><h5 class="my-0 py-0" style="color: #f2f2f2">Rules</h5></div>
+        <div class="rules-item" style="background-color: #222222">
+          <div class="rules-item-number">
+            <h4 class="py-0 my-0" style="color: #f2f2f2">1.</h4>
+          </div>
+          <div class="rules-item-text">
+            <p class="lead" style="color: #ffffff">No Prop-killing</p>
+          </div>
+        </div>        <div class="rules-item rules-dark" style="background-color: #222222">
+          <div class="rules-item-number">
+            <h4 class="py-0 my-0" style="color: #f2f2f2">2.</h4>
+          </div>
+          <div class="rules-item-text">
+            <p class="lead" style="color: #ffffff">No Spamming</p>
+          </div>
+        </div>        <div class="rules-item" style="background-color: #222222">
+          <div class="rules-item-number">
+            <h4 class="py-0 my-0" style="color: #f2f2f2">3.</h4>
+          </div>
+          <div class="rules-item-text">
+            <p class="lead" style="color: #ffffff">No Cheats/Exploits</p>
+          </div>
+        </div>        <div class="rules-item rules-dark" style="background-color: #222222">
+          <div class="rules-item-number">
+            <h4 class="py-0 my-0" style="color: #f2f2f2">4.</h4>
+          </div>
+          <div class="rules-item-text">
+            <p class="lead" style="color: #ffffff">No Prop-abusing</p>
+          </div>
+        </div>                        </div></div>  <div class="col"><div class="description-info" style="background-color: #222222">
+    <div class="description-info-header" style="background-color: #222222"><h5 class="my-0 py-0" style="color: #f2f2f2">Description</h5></div>
+          <p class="lead mb-0 pb-0" style="color: #ffffff">Welcome to FlameGaming!<br>
+We hope you enjoy your stay on our DarkRP Server. See you there!<br>
+<br>
+And remember... staff's always right!</p>
+        </div></div>
+  <div class="col"><div class="server-info" style="background-color: #222222">
+          <div class="server-info-header" style="background-color: #222222"><h5 class="my-0 py-0" style="color: #f2f2f2">Server Info</h5></div><div class="server-info-table">
+            <div class="server-info-slot" style="width: 60px"><img alt="Map" class="server-info-icon" src="https://gmod-lsm.com/images/designs/map-regular-light.svg"><br><img alt="Gamemode" class="server-info-icon" src="https://gmod-lsm.com/images/designs/gamepad-solid-light.svg"></div><div class="server-info-slot" style="text-align: left;"><p id="load-mapname" style="color: #f2f2f2">gm_flatgrass</p><p id="load-gamemode" style="color: #f2f2f2">sandbox</p></div>
+          </div>
+        </div></div>
+</div></div>
+      <div class="title-info">
+        <h4 class="my-0 py-0" style="color: #e8e8e8">Welcome to</h4>
+        <h1 class="my-0 py-0" style="color: #e8e8e8">FlameGaming</h1>
+      </div>
+      
+        <div class="user-info" style="background-color: #222222">
+          <div class="user-info-img" style="border-color: #e74c3c">
+            <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/b3/b301117db48b92b032bb29b273f05533fa7ae7c8_full.jpg">
+        </div>
+          <div class="user-info-text">
+            <h4 class="mb-0" style="color: #f2f2f2">Joining Test User</h4>
+            <p class="lead text-black my-0 pb-0" style="color: #777d84">STEAM_0:1:444765763</p>
+          </div>
+        </div>
+                <div class="staff-info">
+          <div class="staff-info-header" style="background-color: #222222"><h5 class="my-0 py-0" style="color: #f2f2f2">Staff</h5></div>
+          <div class="staff-item" style="background-color: #222222">
+          <div class="staff-item-img" style="border-color: #e74c3c">
+            <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/08/08f5905396113a6293e11f636e4ffff0df1b7b8d_medium.jpg">
+          </div>
+          <div class="staff-item-text">
+            <h4 class="my-0 py-0" style="color: #f2f2f2">James</h4>
+            <p class="lead" style="color: #777d84">Owner</p>
+          </div>
+        </div>        <div class="staff-item" style="background-color: #222222">
+          <div class="staff-item-img" style="border-color: #e74c3c">
+            <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/09/094032c5e866e97aa88761fda84ea25c4814aac6_medium.jpg">
+          </div>
+          <div class="staff-item-text">
+            <h4 class="my-0 py-0" style="color: #f2f2f2">smith</h4>
+            <p class="lead" style="color: #777d84">Superadmin</p>
+          </div>
+        </div>        <div class="staff-item" style="background-color: #222222">
+          <div class="staff-item-img" style="border-color: #e74c3c">
+            <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/00/00589faac6bfa8ab9dcaa3359f1ee3ffb361d934_medium.jpg">
+          </div>
+          <div class="staff-item-text">
+            <h4 class="my-0 py-0" style="color: #f2f2f2">Dwight K. Schrute</h4>
+            <p class="lead" style="color: #777d84">Admin</p>
+          </div>
+        </div>          </div>          <div class="progress-bar-n" style="background-color: #222222">
+        <h2 style="color: #f2f2f2"><span id="percent">100</span>%<span class="progresstext" id="progresstext">Sending client info...</span></h2>
+          <div class="progress-bar-n-inner" id="progress-bar" style="background-color: rgb(231, 76, 60); width: 100%;"><div><h2 style="color: #222222"><span id="percent-loaded">100</span>%<span class="progresstext" id="progresstext-loaded">Sending client info...</span></h2></div></div>
+        </div>
+      </div>
+      <script type="text/javascript">
+         function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode ) {
+         document.getElementById("load-mapname").innerHTML = mapname;
+         document.getElementById("load-gamemode").innerHTML = gamemode;
+         }
+       </script>
+      <div style="background-size: cover; margin: 0px; padding: 0px; background-image: url(&quot;https://stmed.net/sites/default/files/styles/1920x1080/public/drag-me-to-hell-wallpapers-29506-2985519.jpg?itok=4xn-v-Cc&quot;); opacity: 0;" id="bg">
+      </div> 
+
+      <div style="background-size: cover; margin: 0px; padding: 0px; background-image: url(&quot;https://stmed.net/sites/default/files/styles/1920x1080/public/drag-me-to-hell-wallpapers-29506-2985519.jpg?itok=4xn-v-Cc&quot;); background-repeat: no-repeat;" id="bg2">
+      </div>
+
+    <script src="https://gmod-lsm.com/assets/vendor/jquery/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $( "#loader-wrapper" ).fadeOut( "slow" );
+      });
+    $(function () {
+  $("[data-toggle=popover]").popover({html:true})
+  $("#upgrade-pro").popover('show')
+
+})
+  </script>
+
+    <script type="text/javascript">
+
+   document.getElementById("percent").innerHTML = "5";
+   document.getElementById("percent-loaded").innerHTML = "5";
+
+   $('#progress-bar').css({ "width" : "5%"});
+
+   document.getElementById("progresstext").innerHTML = "Retrieving server info...";
+   document.getElementById("progresstext-loaded").innerHTML = "Retrieving server info...";
+</script>
+
+      <script type="text/javascript">
+        var background1 = "https:\/\/cdn.allwallpaper.in\/wallpapers\/1920x1080\/16795\/space-hell-1920x1080-wallpaper.jpg";
+        var background2 = "https:\/\/wallpapercave.com\/wp\/wp2858269.jpg";
+        var background3 = "https:\/\/stmed.net\/sites\/default\/files\/styles\/1920x1080\/public\/drag-me-to-hell-wallpapers-29506-2985519.jpg?itok=4xn-v-Cc";
+        var background4 = "https:\/\/wallpapercave.com\/wp\/LDX4QKv.jpg";
+      </script>
+
+           <script>
+    	//Change Progress
+	$(document).ready(function(){
+	
+	for (let progress = 0; progress < 11; progress++) {
+		setTimeout( function timer(){
+	
+	if(progress == 1){
+	$("#progress-bar").animate({width: '10%'});
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 10;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 2){
+		
+	$("#progresstext").text("Mounting Addons");
+	$("#progress-bar").animate({width: '20%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 20;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 3){
+	
+	$("#progress-bar").animate({width: '30%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 30;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 4){
+	
+	$("#progress-bar").animate({width: '40%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 40;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 5){
+	
+	$("#progress-bar").animate({width: '50%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 50;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	/*
+	if(progress == 6){
+	
+	$("#progresstext").text('Workshop complete');
+	$("#progress-bar").animate({width: '60%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 60;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	} */
+	
+	if(progress == 6){
+		
+	$("#progresstext").text("Workshop Complete");
+	$("#progress-bar").animate({width: '70%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 70;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 8){
+	
+	$("#progress-bar").animate({width: '80%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 80;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 9){
+		
+	$("#progresstext").text("Sending client info...");
+	$("#progress-bar").animate({width: '90%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 90;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 10){
+	
+	$("#progress-bar").animate({width: '100%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 100;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+
+
+	if(progress == 1){
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 10;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 2){
+		
+	$("#progresstext-loaded").text("Mounting Addons");
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 20;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 3){
+	
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 30;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 4){
+	
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 40;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 5){
+	
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 50;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	/*
+	if(progress == 6){
+	
+	$("#progresstext").text('Workshop complete');
+	$("#progress-bar").animate({width: '60%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 60;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	} */
+	
+	if(progress == 6){
+		
+	$("#progresstext-loaded").text("Workshop Complete");
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 70;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 8){
+	
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 80;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 9){
+		
+	$("#progresstext-loaded").text("Sending client info...");
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 90;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 10){
+	
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 100;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+
+	}, progress*2000 );
+	} 
+
+});
+
+
+    </script>
+
+    <script>
+		//showDemo();
+    $("#showDemo").fadeOut(0);
+		function showDemo(){
+			$("#showDemo").fadeIn(2000);
+			setTimeout(function(){
+				$("#showDemo").fadeOut(2000);
+				setTimeout(showDemo, 4000);
+			}, 4000);
+		}
+	</script>
+
+      <script src="https://gmod-lsm.com/assets/js/background-cycle.js"></script>
+
+    <script src="https://gmod-lsm.com/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  
+
+</body>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1024, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="">
+
+    <title>Example: FlameGaming / LSM</title>
+    <meta name="description" content="Gmod Loading Screen Maker / Running a demo of FlameGaming - Powered by gmod-lsm.com">
+
+    <meta name="theme-color" content="#e74c3c">
+
+    <link href="https://gmod-lsm.com/assets/css/normalize.css" rel="stylesheet">
+
+    <link href="https://gmod-lsm.com/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://gmod-lsm.com/assets/css/loadingscreen-base.css" rel="stylesheet">
+    
+     <link href="https://gmod-lsm.com/assets/css/load.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="https://gmod-lsm.com/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+    <style>
+
+    html,body{
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body{
+      background: #000;
+    }
+
+
+  </style>
+
+  </head>
+
+  <body>
+
+    <div id="loader-wrapper" style="display: none;">
+      <div id="loader"></div>
+  </div>
+
+  
+  	
+          <style>
+       #bg, #bg img, #bg2{
+        background-image: #000000;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+      } 
+      </style>
+      
+    
+  
+    
+
+<link href="https://gmod-lsm.com/assets/css/designs/split.css?v=1.7.2" rel="stylesheet">
+<div class="loading-screen loading-screen-demo">
+  <div class="bottom-bar" style="background-color: #222222">
+    <div class="row" style="height: 100%">
+  <div class="col">
+      <div class="rules-info">
+        <div class="rules-info-header" style="background-color: #222222"><h5 class="my-0 py-0" style="color: #f2f2f2">Rules</h5></div>
+        <div class="rules-item" style="background-color: #222222">
+          <div class="rules-item-number">
+            <h4 class="py-0 my-0" style="color: #f2f2f2">1.</h4>
+          </div>
+          <div class="rules-item-text">
+            <p class="lead" style="color: #ffffff">No Prop-killing</p>
+          </div>
+        </div>        <div class="rules-item rules-dark" style="background-color: #222222">
+          <div class="rules-item-number">
+            <h4 class="py-0 my-0" style="color: #f2f2f2">2.</h4>
+          </div>
+          <div class="rules-item-text">
+            <p class="lead" style="color: #ffffff">No Spamming</p>
+          </div>
+        </div>        <div class="rules-item" style="background-color: #222222">
+          <div class="rules-item-number">
+            <h4 class="py-0 my-0" style="color: #f2f2f2">3.</h4>
+          </div>
+          <div class="rules-item-text">
+            <p class="lead" style="color: #ffffff">No Cheats/Exploits</p>
+          </div>
+        </div>        <div class="rules-item rules-dark" style="background-color: #222222">
+          <div class="rules-item-number">
+            <h4 class="py-0 my-0" style="color: #f2f2f2">4.</h4>
+          </div>
+          <div class="rules-item-text">
+            <p class="lead" style="color: #ffffff">No Prop-abusing</p>
+          </div>
+        </div>                        </div></div>  <div class="col"><div class="description-info" style="background-color: #222222">
+    <div class="description-info-header" style="background-color: #222222"><h5 class="my-0 py-0" style="color: #f2f2f2">Description</h5></div>
+          <p class="lead mb-0 pb-0" style="color: #ffffff">Welcome to FlameGaming!<br>
+We hope you enjoy your stay on our DarkRP Server. See you there!<br>
+<br>
+And remember... staff's always right!</p>
+        </div></div>
+  <div class="col"><div class="server-info" style="background-color: #222222">
+          <div class="server-info-header" style="background-color: #222222"><h5 class="my-0 py-0" style="color: #f2f2f2">Server Info</h5></div><div class="server-info-table">
+            <div class="server-info-slot" style="width: 60px"><img alt="Map" class="server-info-icon" src="https://gmod-lsm.com/images/designs/map-regular-light.svg"><br><img alt="Gamemode" class="server-info-icon" src="https://gmod-lsm.com/images/designs/gamepad-solid-light.svg"></div><div class="server-info-slot" style="text-align: left;"><p id="load-mapname" style="color: #f2f2f2">gm_flatgrass</p><p id="load-gamemode" style="color: #f2f2f2">sandbox</p></div>
+          </div>
+        </div></div>
+</div></div>
+      <div class="title-info">
+        <h4 class="my-0 py-0" style="color: #e8e8e8">Welcome to</h4>
+        <h1 class="my-0 py-0" style="color: #e8e8e8">FlameGaming</h1>
+      </div>
+      
+        <div class="user-info" style="background-color: #222222">
+          <div class="user-info-img" style="border-color: #e74c3c">
+            <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/b3/b301117db48b92b032bb29b273f05533fa7ae7c8_full.jpg">
+        </div>
+          <div class="user-info-text">
+            <h4 class="mb-0" style="color: #f2f2f2">Joining Test User</h4>
+            <p class="lead text-black my-0 pb-0" style="color: #777d84">STEAM_0:1:444765763</p>
+          </div>
+        </div>
+                <div class="staff-info">
+          <div class="staff-info-header" style="background-color: #222222"><h5 class="my-0 py-0" style="color: #f2f2f2">Staff</h5></div>
+          <div class="staff-item" style="background-color: #222222">
+          <div class="staff-item-img" style="border-color: #e74c3c">
+            <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/08/08f5905396113a6293e11f636e4ffff0df1b7b8d_medium.jpg">
+          </div>
+          <div class="staff-item-text">
+            <h4 class="my-0 py-0" style="color: #f2f2f2">James</h4>
+            <p class="lead" style="color: #777d84">Owner</p>
+          </div>
+        </div>        <div class="staff-item" style="background-color: #222222">
+          <div class="staff-item-img" style="border-color: #e74c3c">
+            <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/09/094032c5e866e97aa88761fda84ea25c4814aac6_medium.jpg">
+          </div>
+          <div class="staff-item-text">
+            <h4 class="my-0 py-0" style="color: #f2f2f2">smith</h4>
+            <p class="lead" style="color: #777d84">Superadmin</p>
+          </div>
+        </div>        <div class="staff-item" style="background-color: #222222">
+          <div class="staff-item-img" style="border-color: #e74c3c">
+            <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/00/00589faac6bfa8ab9dcaa3359f1ee3ffb361d934_medium.jpg">
+          </div>
+          <div class="staff-item-text">
+            <h4 class="my-0 py-0" style="color: #f2f2f2">Dwight K. Schrute</h4>
+            <p class="lead" style="color: #777d84">Admin</p>
+          </div>
+        </div>          </div>          <div class="progress-bar-n" style="background-color: #222222">
+        <h2 style="color: #f2f2f2"><span id="percent">100</span>%<span class="progresstext" id="progresstext">Sending client info...</span></h2>
+          <div class="progress-bar-n-inner" id="progress-bar" style="background-color: rgb(231, 76, 60); width: 100%;"><div><h2 style="color: #222222"><span id="percent-loaded">100</span>%<span class="progresstext" id="progresstext-loaded">Sending client info...</span></h2></div></div>
+        </div>
+      </div>
+      <script type="text/javascript">
+         function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode ) {
+         document.getElementById("load-mapname").innerHTML = mapname;
+         document.getElementById("load-gamemode").innerHTML = gamemode;
+         }
+       </script>
+      <div style="background-size: cover; margin: 0px; padding: 0px; background-image: url(&quot;https://stmed.net/sites/default/files/styles/1920x1080/public/drag-me-to-hell-wallpapers-29506-2985519.jpg?itok=4xn-v-Cc&quot;); opacity: 0;" id="bg">
+      </div> 
+
+      <div style="background-size: cover; margin: 0px; padding: 0px; background-image: url(&quot;https://stmed.net/sites/default/files/styles/1920x1080/public/drag-me-to-hell-wallpapers-29506-2985519.jpg?itok=4xn-v-Cc&quot;); background-repeat: no-repeat;" id="bg2">
+      </div>
+
+    <script src="https://gmod-lsm.com/assets/vendor/jquery/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $( "#loader-wrapper" ).fadeOut( "slow" );
+      });
+    $(function () {
+  $("[data-toggle=popover]").popover({html:true})
+  $("#upgrade-pro").popover('show')
+
+})
+  </script>
+
+    <script type="text/javascript">
+
+   document.getElementById("percent").innerHTML = "5";
+   document.getElementById("percent-loaded").innerHTML = "5";
+
+   $('#progress-bar').css({ "width" : "5%"});
+
+   document.getElementById("progresstext").innerHTML = "Retrieving server info...";
+   document.getElementById("progresstext-loaded").innerHTML = "Retrieving server info...";
+</script>
+
+      <script type="text/javascript">
+        var background1 = "https:\/\/cdn.allwallpaper.in\/wallpapers\/1920x1080\/16795\/space-hell-1920x1080-wallpaper.jpg";
+        var background2 = "https:\/\/wallpapercave.com\/wp\/wp2858269.jpg";
+        var background3 = "https:\/\/stmed.net\/sites\/default\/files\/styles\/1920x1080\/public\/drag-me-to-hell-wallpapers-29506-2985519.jpg?itok=4xn-v-Cc";
+        var background4 = "https:\/\/wallpapercave.com\/wp\/LDX4QKv.jpg";
+      </script>
+
+           <script>
+    	//Change Progress
+	$(document).ready(function(){
+	
+	for (let progress = 0; progress < 11; progress++) {
+		setTimeout( function timer(){
+	
+	if(progress == 1){
+	$("#progress-bar").animate({width: '10%'});
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 10;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 2){
+		
+	$("#progresstext").text("Mounting Addons");
+	$("#progress-bar").animate({width: '20%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 20;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 3){
+	
+	$("#progress-bar").animate({width: '30%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 30;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 4){
+	
+	$("#progress-bar").animate({width: '40%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 40;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 5){
+	
+	$("#progress-bar").animate({width: '50%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 50;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	/*
+	if(progress == 6){
+	
+	$("#progresstext").text('Workshop complete');
+	$("#progress-bar").animate({width: '60%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 60;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	} */
+	
+	if(progress == 6){
+		
+	$("#progresstext").text("Workshop Complete");
+	$("#progress-bar").animate({width: '70%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 70;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 8){
+	
+	$("#progress-bar").animate({width: '80%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 80;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 9){
+		
+	$("#progresstext").text("Sending client info...");
+	$("#progress-bar").animate({width: '90%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 90;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 10){
+	
+	$("#progress-bar").animate({width: '100%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 100;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+
+
+	if(progress == 1){
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 10;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 2){
+		
+	$("#progresstext-loaded").text("Mounting Addons");
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 20;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 3){
+	
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 30;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 4){
+	
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 40;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 5){
+	
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 50;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	/*
+	if(progress == 6){
+	
+	$("#progresstext").text('Workshop complete');
+	$("#progress-bar").animate({width: '60%'});
+	
+	
+	$('#percent').each(function() {
+  var $this = $(this),
+      countTo = 60;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	} */
+	
+	if(progress == 6){
+		
+	$("#progresstext-loaded").text("Workshop Complete");
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 70;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 8){
+	
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 80;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 9){
+		
+	$("#progresstext-loaded").text("Sending client info...");
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 90;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+	
+	if(progress == 10){
+	
+	
+	
+	$('#percent-loaded').each(function() {
+  var $this = $(this),
+      countTo = 100;
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 300,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+});
+	
+	}
+
+	}, progress*2000 );
+	} 
+
+});
+
+
+    </script>
+
+    <script>
+		//showDemo();
+    $("#showDemo").fadeOut(0);
+		function showDemo(){
+			$("#showDemo").fadeIn(2000);
+			setTimeout(function(){
+				$("#showDemo").fadeOut(2000);
+				setTimeout(showDemo, 4000);
+			}, 4000);
+		}
+	</script>
+
+      <script src="https://gmod-lsm.com/assets/js/background-cycle.js"></script>
+
+    <script src="https://gmod-lsm.com/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  
+
+</body></html>
